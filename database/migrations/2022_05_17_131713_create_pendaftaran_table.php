@@ -17,6 +17,8 @@ class CreatePendaftaranTable extends Migration
             $table->id();
             $table->foreignId('id_pengunjung')->constrained('pengunjung')->onDelete('cascade');
             $table->foreignId('id_anggota')->constrained('anggota')->onDelete('cascade');
+            $table->string('no_ktp', 50);
+            $table->string('alamat', 100);
         });
     }
 
